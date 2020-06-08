@@ -1,0 +1,2 @@
+[![Total Downloads](https://poser.pugx.org/hooina/http/downloads)](https://packagist.org/packages/hooina/http)
+[![License](https://poser.pugx.org/hooina/http/license)](https://packagist.org/packages/hooina/http)
