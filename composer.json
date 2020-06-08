@@ -1,0 +1,20 @@
+{
+    "name": "exhum4n/http",
+    "license": "MIT",
+    "description": "The Extale http package",
+    "authors": [
+        {
+            "name": "exhum4n",
+            "email": "exhum4n.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Exhum4n\\Http\\": "src/"
+        }
+    }
+}
