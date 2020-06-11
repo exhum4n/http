@@ -17,8 +17,5 @@
             "Hooina\\Http\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "require-dev": {
-        "symfony/var-dumper": "^5.2@dev"
-    }
+    "minimum-stability": "dev"
 }
