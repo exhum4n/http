@@ -1,11 +1,10 @@
 <?php
 
-namespace Extale\Http\Routes\Builders;
+namespace Hooina\Http\Routes\Factory;
 
-use Extale\Http\Routes\Builders\Contracts\RouteBuilderContract;
-use Extale\Http\Routes\Route;
+use Hooina\Http\Routes\Route;
 
-class RouteBuilder extends Route implements RouteBuilderContract
+class RouteFactory extends Route
 {
     protected Route $route;
 
@@ -18,7 +17,7 @@ class RouteBuilder extends Route implements RouteBuilderContract
         $this->route->action = $action;
     }
 
-    public function produce(): Route
+    public function create(): Route
     {
         return $this->route;
     }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Extale\Http\Responses;
+namespace Hooina\Http\Responses;
 
-use Extale\Http\Responses\Contracts\ResponseContract;
+use Hooina\Http\Responses\Interfaces\ResponseInterface;
 
-class Response implements ResponseContract
+class Response implements ResponseInterface
 {
     protected array $content;
 

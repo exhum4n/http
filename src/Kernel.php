@@ -1,27 +1,29 @@
 <?php
 
-namespace Extale\Http;
+namespace Hooina\Http;
 
-use Extale\Http\Requests\Contracts\RequestReceiverContract;
-use Extale\Http\Contracts\KernelContract;
-use Extale\Http\Responses\Contracts\ResponseContract;
-use Extale\Http\Routes\Contracts\RouteReceiverContract;
+use Hooina\Http\Requests\RequestReceiver;
+use Hooina\Http\Responses\Response;
+use Hooina\Http\Routes\RouteReceiver;
+use Hooina\Http\Routes\Exceptions\RouteNotFoundException;
 
-class Kernel implements KernelContract
+class Kernel
 {
-    protected RequestReceiverContract $requestReceiver;
+    protected RequestReceiver $requestReceiver;
 
-    protected RouteReceiverContract $routeReceiver;
+    protected RouteReceiver $routeReceiver;
 
     protected string $basePath;
 
-    protected string $controller;
+    protected array $options;
 
-    protected array $arguments;
-
-    protected object $options;
-
-    public function handle(): ResponseContract
+    /**
+     * Get request data and create response object
+     *
+     * @return Response
+     * @throws RouteNotFoundException
+     */
+    public function handle(): Response
     {
         $request = $this->requestReceiver->getRequest();
 

@@ -1,10 +1,9 @@
 <?php
 
-namespace Extale\Http\Routes;
+namespace Hooina\Http\Routes;
 
-use Extale\Http\Requests\Contracts\RequestContract;
-use Extale\Http\Routes\Contracts\RouteContract;
-use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
+use Exception;
+use Hooina\Http\Requests\Request;
 
 /**
  * @method static array get (string $path, string $controller, string $action)
@@ -23,7 +22,7 @@ use Symfony\Component\HttpKernel\Exception\MethodNotAllowedHttpException;
  * @method static array propfind (string $path, string $controller, string $action)
  * @method static array view (string $path, string $controller, string $action)
  */
-class Route implements RouteContract
+class Route
 {
     protected string $method;
 
@@ -52,7 +51,7 @@ class Route implements RouteContract
     public static function __callStatic($name, $arguments): array
     {
         if (isset(static::$availableMethods) === false) {
-            throw new MethodNotAllowedHttpException(static::$availableMethods);
+            throw new Exception(static::$availableMethods);
         }
 
         return static::make(...[strtoupper($name), ...$arguments]);
@@ -73,7 +72,7 @@ class Route implements RouteContract
         return $this->controller;
     }
 
-    public function run(RequestContract $request)
+    public function run(Request $request)
     {
         $action = $this->action;
 

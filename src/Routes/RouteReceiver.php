@@ -7,20 +7,21 @@
  * PhpUnhandledExceptionInspection
  */
 
-namespace Extale\Http\Routes;
+namespace Hooina\Http\Routes;
 
-use Extale\Http\Routes\Builders\RouteBuilder;
-use Extale\Http\Routes\Contracts\RouteReceiverContract;
-use Extale\Http\Requests\Request;
-use Extale\Http\Routes\Exceptions\RouteNotFoundException;
+use Hooina\Http\Requests\Interfaces\RequestInterface;
+use Hooina\Http\Routes\Factory\RouteFactory;
+use Hooina\Http\Routes\Exceptions\RouteNotFoundException;
 
-class RouteReceiver implements RouteReceiverContract
+class RouteReceiver
 {
-    protected string $routesPath;
+    protected ?string $routesPath;
 
-    protected array $routes;
+    protected ?array $routes;
 
-    public function getRoute(Request $request): Route
+    protected string $basePath;
+
+    public function getRoute(RequestInterface $request): Route
     {
         $requestPath = $request->getRequestPath();
 
@@ -30,21 +31,6 @@ class RouteReceiver implements RouteReceiverContract
             throw new RouteNotFoundException($requestPath);
         }
 
-        return (new RouteBuilder(...$this->routes[$requestPath][$request->getMethod()]))->produce();
-    }
-
-    protected function getRoutes(): array
-    {
-        $routes = include_once $this->routesPath;
-
-        $list = [];
-
-        foreach ($routes as $index => $route) {
-            foreach ($route as $path => $params) {
-                $list[$path][$params['method']] = array_values($params);
-            }
-        }
-
-        return $list;
+        return (new RouteFactory(...$this->routes[$requestPath][$request->getMethod()]))->create();
     }
 }

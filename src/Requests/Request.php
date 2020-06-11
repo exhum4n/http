@@ -1,10 +1,10 @@
 <?php
 
-namespace Extale\Http\Requests;
+namespace Hooina\Http\Requests;
 
-use Extale\Http\Requests\Contracts\RequestContract;
+use Hooina\Http\Requests\Interfaces\RequestInterface;
 
-class Request implements RequestContract
+class Request implements RequestInterface
 {
     protected string $path;
 
@@ -19,7 +19,7 @@ class Request implements RequestContract
         return $this->parameters;
     }
 
-    public function get(string $key): ?string
+    public function get(string $key)
     {
         return $this->parameters[$key];
     }

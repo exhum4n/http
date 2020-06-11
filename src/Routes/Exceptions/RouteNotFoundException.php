@@ -1,6 +1,6 @@
 <?php
 
-namespace Extale\Http\Routes\Exceptions;
+namespace Hooina\Http\Routes\Exceptions;
 
 use Exception;
 use Throwable;

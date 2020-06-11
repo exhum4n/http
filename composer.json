@@ -9,12 +9,17 @@
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^7.4",
+        "ext-json": "*",
+        "symfony/http-foundation": "^5.2@dev"
     },
     "autoload": {
         "psr-4": {
             "Hooina\\Http\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "^5.2@dev"
+    }
 }

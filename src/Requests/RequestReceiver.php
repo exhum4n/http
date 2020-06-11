@@ -1,21 +1,25 @@
 <?php
 
-namespace Extale\Http\Requests;
+namespace Hooina\Http\Requests;
 
-use Extale\Http\Requests\Builders\RequestBuilder;
-use Extale\Http\Requests\Contracts\RequestReceiverContract;
-use Symfony\Component\HttpFoundation\Request as SymfonyRequest;
+use Hooina\Http\Requests\Factory\RequestFactory;
 
-class RequestReceiver implements RequestReceiverContract
+class RequestReceiver
 {
-    protected SymfonyRequest $request;
+    protected array $headers;
+
+    protected string $method;
+
+    protected string $path;
 
     protected array $parameters;
 
     protected string $basePath;
 
+    protected array $files;
+
     public function getRequest(): Request
     {
-        return (new RequestBuilder($this->request, $this->parameters))->produce();
+        return (new RequestFactory())->create($this->method, $this->path, $this->parameters, $this->headers);
     }
 }
