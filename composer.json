@@ -10,8 +10,7 @@
     ],
     "require": {
         "php": "^7.4",
-        "ext-json": "*",
-        "symfony/http-foundation": "^5.2@dev"
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
