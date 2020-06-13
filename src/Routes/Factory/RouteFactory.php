@@ -3,8 +3,10 @@
 namespace Hooina\Http\Routes\Factory;
 
 use Hooina\Http\Routes\Route;
+use Hooina\Interfaces\Http\Routes\Factory\RouteFactoryInterface;
+use Hooina\Interfaces\Http\Routes\RouteInterface;
 
-class RouteFactory extends Route
+class RouteFactory extends Route implements RouteFactoryInterface
 {
     protected Route $route;
 
@@ -17,7 +19,7 @@ class RouteFactory extends Route
         $this->route->action = $action;
     }
 
-    public function create(): Route
+    public function create(): RouteInterface
     {
         return $this->route;
     }

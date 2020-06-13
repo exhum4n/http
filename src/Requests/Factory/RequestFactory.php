@@ -6,14 +6,22 @@ use Hooina\Http\Requests\Request;
 
 class RequestFactory extends Request
 {
-    public function create(string $method, string $path, array $parameters = [], array $headers = []): Request
-    {
-        $request = new Request();
+    protected string $requestClass;
 
-        $request->method = $method;
-        $request->parameters = $parameters;
-        $request->path = $path;
-        $request->headers = $headers;
+    public function __construct($requestClass)
+    {
+        $this->requestClass = $requestClass;
+    }
+
+    public function create(array $data): Request
+    {
+        $request = new $this->requestClass();
+
+        $request->method = $data['method'];
+        $request->path = $data['path'];
+        $request->parameters = $data['parameters'];
+        $request->headers = $data['headers'];
+        $request->files = $data['files'];
 
         return $request;
     }

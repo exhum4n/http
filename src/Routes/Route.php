@@ -3,7 +3,8 @@
 namespace Hooina\Http\Routes;
 
 use Exception;
-use Hooina\Http\Requests\Request;
+use Hooina\Enums\Base\RequestMethods;
+use Hooina\Interfaces\Http\Routes\RouteInterface;
 
 /**
  * @method static array get (string $path, string $controller, string $action)
@@ -22,65 +23,87 @@ use Hooina\Http\Requests\Request;
  * @method static array propfind (string $path, string $controller, string $action)
  * @method static array view (string $path, string $controller, string $action)
  */
-class Route
+class Route implements RouteInterface
 {
+    /**
+     * Request method
+     *
+     * @var string $method
+     */
     protected string $method;
 
+    /**
+     * Requested controller class
+     *
+     * @var string $controller
+     */
     protected string $controller;
 
+    /**
+     * Controller action name
+     *
+     * @var string
+     */
     protected string $action;
 
-    protected static array $availableMethods = [
-        'get',
-        'post',
-        'put',
-        'patch',
-        'delete',
-        'copy',
-        'head',
-        'options',
-        'link',
-        'unlink',
-        'purge',
-        'lock',
-        'unlock',
-        'propfind',
-        'view'
-    ];
-
+    /**
+     * Call make method for different request methods
+     *
+     * @param string $name Request method type
+     * @param array $arguments Route data
+     *
+     * @return array
+     *
+     * @throws Exception
+     */
     public static function __callStatic($name, $arguments): array
     {
-        if (isset(static::$availableMethods) === false) {
-            throw new Exception(static::$availableMethods);
+        if (RequestMethods::isKeyExist($name) === null) {
+            throw new Exception('Route method not available');
         }
 
         return static::make(...[strtoupper($name), ...$arguments]);
     }
 
+    /**
+     * Request method getter
+     *
+     * @return string
+     */
     public function getMethod(): string
     {
         return $this->method;
     }
 
+    /**
+     * Controller action getter
+     *
+     * @return string
+     */
     public function getAction(): string
     {
         return $this->action;
     }
 
+    /**
+     * Requested controller getter
+     *
+     * @return string
+     */
     public function getController(): string
     {
         return $this->controller;
     }
 
-    public function run(Request $request)
-    {
-        $action = $this->action;
-
-        $controller = new $this->controller();
-
-        return $controller->$action($request);
-    }
-
+    /**
+     * Make route
+     *
+     * @param string $method Request method
+     * @param string $path Request path
+     * @param string $controller The controller that will handle
+     * @param string $action Method name in controller
+     * @return array
+     */
     protected static function make(string $method, string $path, string $controller, string $action): array
     {
         return [

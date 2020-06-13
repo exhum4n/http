@@ -3,23 +3,20 @@
 namespace Hooina\Http\Requests;
 
 use Hooina\Http\Requests\Factory\RequestFactory;
+use Hooina\Interfaces\Http\Requests\RequestReceiverInterface;
+use Hooina\Http\Requests\Traits\Globals;
 
-class RequestReceiver
+class RequestReceiver implements RequestReceiverInterface
 {
-    protected array $headers;
+    use Globals;
 
-    protected string $method;
-
-    protected string $path;
-
-    protected array $parameters;
-
-    protected string $basePath;
-
-    protected array $files;
-
+    /**
+     * Receive request and create using factory
+     *
+     * @return Request
+     */
     public function getRequest(): Request
     {
-        return (new RequestFactory())->create($this->method, $this->path, $this->parameters, $this->headers);
+        return (new RequestFactory(Request::class))->create($this->getRequestData());
     }
 }

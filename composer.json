@@ -10,7 +10,9 @@
     ],
     "require": {
         "php": "^7.4",
-        "ext-json": "*"
+        "ext-json": "*",
+        "hooina/interfaces": "1.*",
+        "hooina/enums": "1.*"
     },
     "autoload": {
         "psr-4": {
