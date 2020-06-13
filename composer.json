@@ -17,7 +17,10 @@
     "autoload": {
         "psr-4": {
             "Hooina\\Http\\": "src/"
-        }
+        },
+        "files": [
+            "src/Helpers/http.php"
+        ]
     },
     "minimum-stability": "dev"
 }
