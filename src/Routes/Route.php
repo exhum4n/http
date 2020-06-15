@@ -1,10 +1,10 @@
 <?php
 
-namespace Hooina\Http\Routes;
+namespace Exhum4n\Http\Routes;
 
 use Exception;
-use Hooina\Enums\Base\RequestMethods;
-use Hooina\Interfaces\Http\Routes\RouteInterface;
+use Exhum4n\Enums\Base\RequestMethods;
+use Exhum4n\Interfaces\Http\Routes\RouteInterface;
 
 /**
  * @method static array get (string $path, string $controller, string $action)

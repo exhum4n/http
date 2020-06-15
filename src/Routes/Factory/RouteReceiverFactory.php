@@ -1,11 +1,11 @@
 <?php
 
-namespace Hooina\Http\Routes\Factory;
+namespace Exhum4n\Http\Routes\Factory;
 
-use Hooina\Interfaces\Http\Requests\RequestInterface;
-use Hooina\Interfaces\Http\Routes\Factory\RouteReceiverFactoryInterface;
-use Hooina\Interfaces\Http\Routes\RouteReceiverInterface;
-use Hooina\Http\Routes\RouteReceiver;
+use Exhum4n\Interfaces\Http\Requests\RequestInterface;
+use Exhum4n\Interfaces\Http\Routes\Factory\RouteReceiverFactoryInterface;
+use Exhum4n\Interfaces\Http\Routes\RouteReceiverInterface;
+use Exhum4n\Http\Routes\RouteReceiver;
 
 class RouteReceiverFactory extends RouteReceiver implements RouteReceiverFactoryInterface
 {

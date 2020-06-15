@@ -1,12 +1,12 @@
 <?php
 
-namespace Hooina\Http\Controller;
+namespace Exhum4n\Http\Controller;
 
-use Hooina\Http\Controller\Exceptions\BadRequestException;
-use Hooina\Http\Controller\Exceptions\UndefinedActionException;
-use Hooina\Interfaces\Http\Controller\ControllerInterface;
-use Hooina\Interfaces\Http\Requests\RequestInterface;
-use Hooina\Interfaces\Http\Responses\ResponseInterface;
+use Exhum4n\Http\Controller\Exceptions\BadRequestException;
+use Exhum4n\Http\Controller\Exceptions\UndefinedActionException;
+use Exhum4n\Interfaces\Http\Controller\ControllerInterface;
+use Exhum4n\Interfaces\Http\Requests\RequestInterface;
+use Exhum4n\Interfaces\Http\Responses\ResponseInterface;
 use ReflectionClass;
 use ReflectionException;
 use ReflectionParameter;

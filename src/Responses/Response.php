@@ -1,8 +1,8 @@
 <?php
 
-namespace Hooina\Http\Responses;
+namespace Exhum4n\Http\Responses;
 
-use Hooina\Interfaces\Http\Responses\ResponseInterface;
+use Exhum4n\Interfaces\Http\Responses\ResponseInterface;
 
 class Response implements ResponseInterface
 {

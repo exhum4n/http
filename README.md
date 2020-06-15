@@ -1,2 +1,2 @@
-[![Total Downloads](https://poser.pugx.org/hooina/http/downloads)](https://packagist.org/packages/hooina/http)
-[![License](https://poser.pugx.org/hooina/http/license)](https://packagist.org/packages/hooina/http)
+[![Total Downloads](https://poser.pugx.org/exhum4n/http/downloads)](https://packagist.org/packages/exhum4n/http)
+[![License](https://poser.pugx.org/exhum4n/http/license)](https://packagist.org/packages/exhum4n/http)

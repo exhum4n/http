@@ -1,9 +1,9 @@
 <?php
 
-namespace Hooina\Http\Validation;
+namespace Exhum4n\Http\Validation;
 
-use Hooina\Interfaces\Validation\Errors\ErrorBagInterface;
-use Hooina\Interfaces\Validation\ValidatorInterface;
+use Exhum4n\Interfaces\Validation\Errors\ErrorBagInterface;
+use Exhum4n\Interfaces\Validation\ValidatorInterface;
 
 class FakeValidator implements ValidatorInterface
 {

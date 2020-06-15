@@ -1,17 +1,17 @@
 <?php
 
-namespace Hooina\Http;
+namespace Exhum4n\Http;
 
-use Hooina\Http\Controller\ControllerFactory;
-use Hooina\Interfaces\Http\Controller\ControllerInterface;
-use Hooina\Http\Requests\Factory\RequestFactory;
-use Hooina\Interfaces\Http\KernelInterface;
-use Hooina\Interfaces\Http\Requests\RequestInterface;
-use Hooina\Http\Requests\Request;
-use Hooina\Interfaces\Http\Responses\ResponseInterface;
-use Hooina\Http\Routes\Factory\RouteReceiverFactory;
-use Hooina\Interfaces\Http\Routes\RouteInterface;
-use Hooina\Interfaces\Validation\ValidatorInterface;
+use Exhum4n\Http\Controller\ControllerFactory;
+use Exhum4n\Interfaces\Http\Controller\ControllerInterface;
+use Exhum4n\Http\Requests\Factory\RequestFactory;
+use Exhum4n\Interfaces\Http\KernelInterface;
+use Exhum4n\Interfaces\Http\Requests\RequestInterface;
+use Exhum4n\Http\Requests\Request;
+use Exhum4n\Interfaces\Http\Responses\ResponseInterface;
+use Exhum4n\Http\Routes\Factory\RouteReceiverFactory;
+use Exhum4n\Interfaces\Http\Routes\RouteInterface;
+use Exhum4n\Interfaces\Validation\ValidatorInterface;
 
 class Kernel implements KernelInterface
 {

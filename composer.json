@@ -1,7 +1,8 @@
 {
-    "name": "hooina/http",
+    "name": "exhum4n/http",
     "license": "MIT",
-    "description": "The Extale http package",
+    "description": "Http package",
+    "type": "library",
     "authors": [
         {
             "name": "exhum4n",
@@ -11,12 +12,13 @@
     "require": {
         "php": "^7.4",
         "ext-json": "*",
-        "hooina/interfaces": "1.*",
-        "hooina/enums": "1.*"
+        "exhum4n/interfaces": "1.*",
+        "exhum4n/enums": "1.*"
     },
     "autoload": {
         "psr-4": {
-            "Hooina\\Http\\": "src/"
+            "Exhum4n\\Http\\": "src/",
+            "App\\": "app/"
         },
         "files": [
             "src/Helpers/http.php"

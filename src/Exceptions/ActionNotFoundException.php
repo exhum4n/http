@@ -1,6 +1,6 @@
 <?php
 
-namespace Hooina\Http\Exceptions;
+namespace Exhum4n\Http\Exceptions;
 
 use Exception;
 use Throwable;

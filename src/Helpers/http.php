@@ -1,8 +1,8 @@
 <?php
 
 if (function_exists('response') === false) {
-    function response($content, int $statusCode = 200): Hooina\Http\Responses\Response
+    function response($content, int $statusCode = 200): Exhum4n\Http\Responses\Response
     {
-        return new Hooina\Http\Responses\Response($content, $statusCode);
+        return new Exhum4n\Http\Responses\Response($content, $statusCode);
     }
 }

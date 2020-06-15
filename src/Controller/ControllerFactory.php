@@ -1,10 +1,10 @@
 <?php
 
-namespace Hooina\Http\Controller;
+namespace Exhum4n\Http\Controller;
 
-use Hooina\Interfaces\Http\Controller\ControllerFactoryInterface;
-use Hooina\Interfaces\Http\Controller\ControllerInterface;
-use Hooina\Interfaces\Http\Routes\RouteInterface;
+use Exhum4n\Interfaces\Http\Controller\ControllerFactoryInterface;
+use Exhum4n\Interfaces\Http\Controller\ControllerInterface;
+use Exhum4n\Interfaces\Http\Routes\RouteInterface;
 
 class ControllerFactory extends Controller implements ControllerFactoryInterface
 {

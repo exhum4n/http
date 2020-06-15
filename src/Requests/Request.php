@@ -1,10 +1,10 @@
 <?php
 
-namespace Hooina\Http\Requests;
+namespace Exhum4n\Http\Requests;
 
-use Hooina\Http\Requests\Files\RequestFile;
-use Hooina\Interfaces\Http\Requests\RequestInterface;
-use Hooina\Interfaces\Validation\ValidatorInterface;
+use Exhum4n\Http\Requests\Files\RequestFile;
+use Exhum4n\Interfaces\Http\Requests\RequestInterface;
+use Exhum4n\Interfaces\Validation\ValidatorInterface;
 
 class Request implements RequestInterface
 {

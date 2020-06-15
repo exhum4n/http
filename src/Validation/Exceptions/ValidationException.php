@@ -1,6 +1,6 @@
 <?php
 
-namespace Hooina\Http\Validation\Exceptions;
+namespace Exhum4n\Http\Validation\Exceptions;
 
 use Exception;
 use Throwable;

@@ -1,12 +1,12 @@
 <?php
 
-namespace Hooina\Http\Routes;
+namespace Exhum4n\Http\Routes;
 
-use Hooina\Interfaces\Http\Requests\RequestInterface;
-use Hooina\Http\Routes\Exceptions\RouteNotFoundException;
-use Hooina\Http\Routes\Factory\RouteFactory;
-use Hooina\Interfaces\Http\Routes\RouteInterface;
-use Hooina\Interfaces\Http\Routes\RouteReceiverInterface;
+use Exhum4n\Interfaces\Http\Requests\RequestInterface;
+use Exhum4n\Http\Routes\Exceptions\RouteNotFoundException;
+use Exhum4n\Http\Routes\Factory\RouteFactory;
+use Exhum4n\Interfaces\Http\Routes\RouteInterface;
+use Exhum4n\Interfaces\Http\Routes\RouteReceiverInterface;
 
 class RouteReceiver implements RouteReceiverInterface
 {

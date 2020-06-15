@@ -1,10 +1,10 @@
 <?php
 
-namespace Hooina\Http\Requests;
+namespace Exhum4n\Http\Requests;
 
-use Hooina\Http\Requests\Factory\RequestFactory;
-use Hooina\Interfaces\Http\Requests\RequestReceiverInterface;
-use Hooina\Http\Requests\Traits\Globals;
+use Exhum4n\Http\Requests\Factory\RequestFactory;
+use Exhum4n\Interfaces\Http\Requests\RequestReceiverInterface;
+use Exhum4n\Http\Requests\Traits\Globals;
 
 class RequestReceiver implements RequestReceiverInterface
 {

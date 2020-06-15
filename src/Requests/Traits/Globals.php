@@ -1,8 +1,8 @@
 <?php
 
-namespace Hooina\Http\Requests\Traits;
+namespace Exhum4n\Http\Requests\Traits;
 
-use Hooina\Http\Requests\Files\Factory\RequestFileFactory;
+use Exhum4n\Http\Requests\Files\Factory\RequestFileFactory;
 
 trait Globals
 {

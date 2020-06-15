@@ -1,13 +1,14 @@
 <?php
 
-namespace Hooina\Http\Requests\Files\Factory;
+namespace Exhum4n\Http\Requests\Files\Factory;
 
-use Hooina\Http\Requests\Files\RequestFile;
-use Hooina\Interfaces\Http\Requests\Files\Factory\RequestFileFactoryInterface;
+use Exhum4n\Http\Requests\Files\RequestFile;
+use Exhum4n\Interfaces\Http\Requests\Files\Factory\RequestFileFactoryInterface;
+use Exhum4n\Interfaces\Http\Requests\Files\RequestFileInterface;
 
 class RequestFileFactory extends RequestFile implements RequestFileFactoryInterface
 {
-    public function create(string $name, string $type, string $temp, int $error, int $size): RequestFile
+    public function create(string $name, string $type, string $temp, int $error, int $size): RequestFileInterface
     {
         $file = new RequestFile();
 

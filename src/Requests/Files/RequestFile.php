@@ -1,8 +1,8 @@
 <?php
 
-namespace Hooina\Http\Requests\Files;
+namespace Exhum4n\Http\Requests\Files;
 
-use Hooina\Interfaces\Http\Requests\Files\RequestFileInterface;
+use Exhum4n\Interfaces\Http\Requests\Files\RequestFileInterface;
 
 class RequestFile implements RequestFileInterface
 {

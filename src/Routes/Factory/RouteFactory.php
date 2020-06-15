@@ -1,14 +1,14 @@
 <?php
 
-namespace Hooina\Http\Routes\Factory;
+namespace Exhum4n\Http\Routes\Factory;
 
-use Hooina\Http\Routes\Route;
-use Hooina\Interfaces\Http\Routes\Factory\RouteFactoryInterface;
-use Hooina\Interfaces\Http\Routes\RouteInterface;
+use Exhum4n\Http\Routes\Route;
+use Exhum4n\Interfaces\Http\Routes\Factory\RouteFactoryInterface;
+use Exhum4n\Interfaces\Http\Routes\RouteInterface;
 
 class RouteFactory extends Route implements RouteFactoryInterface
 {
-    protected Route $route;
+    protected RouteInterface $route;
 
     public function __construct(string $method, string $controller, string $action)
     {

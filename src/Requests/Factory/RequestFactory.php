@@ -1,8 +1,8 @@
 <?php
 
-namespace Hooina\Http\Requests\Factory;
+namespace Exhum4n\Http\Requests\Factory;
 
-use Hooina\Http\Requests\Request;
+use Exhum4n\Http\Requests\Request;
 
 class RequestFactory extends Request
 {
